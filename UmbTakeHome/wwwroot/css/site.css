@@ -1,0 +1,53 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#profiledummy{
+    width: 70px;
+    height: 70px;
+    background-color: dimgray;
+    margin: auto;
+}
+
+.bodymain {
+    height: 5000px;
+    overflow-y: hidden;
+}
+
+#logo {
+    width: 1500px;
+    height: 75px;
+}
+
+.umbprimary {
+    background-color: rgb(230, 232, 230);
+}
+
+.fs-7{
+    font-size: 0.9rem!important;
+}
+
+.fs-8 {
+    font-size: 0.8rem !important;
+}
+
+.home-nav > .active {
+    background-color: #ffc107 !important;
+    color: white !important;
+}
+

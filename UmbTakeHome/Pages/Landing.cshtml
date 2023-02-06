@@ -1,0 +1,336 @@
+﻿@page
+@model UmbTakeHome.Pages.LandingModel
+@{
+}
+
+
+<!DOCTYPE html>
+<html class="vh-100" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - UmbTakeHome</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/UmbTakeHome.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/fontawesome/css/font-awesome.min.css">
+</head>
+<body class="h-100">
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="umbprimary p-0 col-2 text-start">
+                <div class="container-fluid p-4 mb-5">
+                    <img src="~/Images/umblogo.png" id="logo" class="img-fluid" />
+                    <label class="fw-semibold">Credit Application</label>
+                </div>
+                <div class="container d-flex h-50 flex-column text-start">
+                    <nav class="nav nav-pills home-nav" role="tablist">
+                        <a class="nav-link fs-7 text-dark mt-2 active" data-bs-toggle="pill" data-bs-target="#applications" type="button" role="tab" aria-controls="pills-home" aria-current="page" href="#"><span class="fa fa-file-text-o me-3"></span>Applications</a>
+                        <a class="nav-link text-dark fs-7 mt-2" aria-current="page" href="#" data-bs-toggle="pill" data-bs-target="#approvals" type="button" role="tab" aria-controls="pills-home"><span class="fa fa-check-square-o me-3"></span>Approvals</a>
+                        <a class="nav-link text-dark fs-7 mt-2" aria-current="page" href="#" data-bs-toggle="pill" data-bs-target="#approvals" type="button" role="tab" aria-controls="pills-home"><span class="fa fa-comment-o me-3"></span>Messages</a>
+                        <a class="nav-link text-dark fs-7 mt-2" aria-current="page" href="#" data-bs-toggle="pill" data-bs-target="#approvals" type="button" role="tab" aria-controls="pills-home"><span class="fa fa-comment-o me-3"></span>Messages</a>
+                    </nav>
+                    <div class="mt-auto">
+                        <a class="nav-link text-dark fs-7" aria-current="page" asp-area="" asp-page="/Index"><span class="fa fa-user-o me-3"></span>logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 p-4">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="applications" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="container-fluid umbprimary rounded-3 pt-3 pb-3 ps-4 pe-4 mb-4">
+                            <div class="ms-5">
+                                <div class="row mb-2 col-9">
+                                    <input type="text" class="form-control for" placeholder="Search by CA number, account number, company name" />
+                                </div>
+                                <div class="row">
+                                    <a class="col-2 text-dark btn btn-light fs-8" href="#">SME Co Ltd<span class="fs-7 btn-close ms-2"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1 fw-bold">
+                                <label>521 results</label>
+                            </div>
+                            <div class="pe-3 fs-7">
+                                <label>Sort by</label>
+                            </div>
+                            <div class="col-3">
+                                <select class="form-select form-select-sm" aria-label="Default select example">
+                                    <option selected>Most Recent</option>
+                                    <option value="1">Start of Month</option>
+                                    <option value="2">Start of Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="container-fluid umbprimary rounded-3 pt-3 pb-3 ps-4 pe-4 mb-4">
+                            <div class="d-flex justify-content-between mb-1">
+                                <label class="text-muted fs-6">Cash Flow Lending</label>
+                                <label class="fs-8">UMB/CF/008/2022</label>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <label class="fw-bold">Mancipia Christie Ventures</label>
+                                <label class="fs-8">16/03/2022</label>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <label class="fs-8">0051076122017</label>
+                                <span class="fs-8 float-end fa fa-pencil"></span>
+                            </div>
+                            <div class="d-flex align-items-end p-0 mb-2">
+                                <span class="badge bg-light text-dark me-2">Current</span>
+                                <span class="badge bg-light text-dark me-2">GHACEM DISTRIBUTOR</span>
+                                <span class="badge bg-light text-dark me-2">1st APRIL 2004</span>
+                                <button class="btn btn-warning text-light float-end ms-auto" id="send">Send for Approval</button>
+                            </div>
+                        </div>
+                        <div class="container-fluid umbprimary rounded-3 pt-3 pb-3 ps-4 pe-4 mb-4">
+                            <div class="d-flex justify-content-between mb-1">
+                                <label class="text-muted fs-6">Cash Flow Lending</label>
+                                <label class="fs-8">UMB/CF/008/2022</label>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <label class="fw-bold">Mancipia Christie Ventures</label>
+                                <label class="fs-8">16/03/2022</label>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <label class="fs-8">0051076122017</label>
+                                <span class="fs-8 float-end fa fa-pencil"></span>
+                            </div>
+                            <div class="d-flex align-items-end p-0 mb-2">
+                                <span class="badge bg-light text-dark me-2">Current</span>
+                                <span class="badge bg-light text-dark me-2">GHACEM DISTRIBUTOR</span>
+                                <span class="badge bg-light text-dark me-2">1st APRIL 2004</span>
+                                <button class="btn btn-warning text-light float-end ms-auto">Send for Approval</button>
+                            </div>
+                        </div>
+                        <div class="container-fluid umbprimary rounded-3 pt-3 pb-3 ps-4 pe-4 mb-4">
+                            <div class="d-flex justify-content-between mb-1">
+                                <label class="text-muted fs-6">Cash Flow Lending</label>
+                                <label class="fs-8">UMB/CF/008/2022</label>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <label class="fw-bold">Mancipia Christie Ventures</label>
+                                <label class="fs-8">16/03/2022</label>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <label class="fs-8">0051076122017</label>
+                                <span class="fs-8 float-end fa fa-pencil"></span>
+                            </div>
+                            <div class="d-flex align-items-end p-0 mb-2">
+                                <span class="badge bg-light text-dark me-2">Current</span>
+                                <span class="badge bg-light text-dark me-2">GHACEM DISTRIBUTOR</span>
+                                <span class="badge bg-light text-dark me-2">1st APRIL 2004</span>
+                                <button class="btn btn-warning text-light float-end ms-auto">Send for Approval</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="approvals" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="container-fluid umbprimary rounded-3 pt-3 pb-3 ps-4 pe-4 mb-4 text-center">
+                            <h4>Under construction</h4>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="approvals" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="container-fluid umbprimary rounded-3 pt-3 pb-3 ps-4 pe-4 mb-4 text-center">
+                            <h4>Under construction</h4>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="approvals" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="container-fluid umbprimary h-75 rounded-3 pt-3 pb-3 ps-4 pe-4 mb-4 text-center">
+                            <h4>Under Construction</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="umbprimary h-100 p-0 col-md-2 col-lg-2 col-sm-2 col-xl-2">
+                <div class="container-fluid ps-0 pe-0 d-flex flex-column text-center umbprimary mt-4">
+                    <div class="text-center d-flex">
+                        <div class="ps-5 w-100">
+                            <img class="rounded" src="~/Images/profile.png" />
+                            <span class="fa fa-bell me-3 align-top"></span>
+                        </div> 
+                    </div>
+                    <label class="fw-semibold">Gideon Bedzrah</label>
+                    <label class="text-muted">Relationship Manager</label>
+                    <div class="mt-5 container-fluid p-0">
+                        <a class="nav-link text-dark fs-8" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#"><span class="fa fa-plus me-3"></span>New Credit Application</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-body p-4">
+                        <div class="mb-2">
+                            <h5 class="d-inline-block">New Credit Application</h5>
+                            <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div>
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#company-info-tab-pane" aria-current="page" role="tab" aria-controls="home-tab-pane" aria-selected="true" href="#">Company Info</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#facility-summary-tab-pane" aria-current="page" role="tab" aria-controls="home-tab-pane" href="#">Facility / Account Summary</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#facility-summary-tab-pane" aria-current="page" role="tab" aria-controls="home-tab-pane" href="#">Company Background</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#facility-summary-tab-pane" aria-current="page" role="tab" aria-controls="home-tab-pane" href="#">Summary / Recommendation</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="company-info-tab-pane" role="tabpanel" aria-labelledby="company-tab" tabindex="0">
+                                    <div class="container-fluid d-flex justify-content-between p-3">
+                                        <div class="container">
+                                            <div class="col-12 p-2">
+                                                <div class="row">
+                                                    <label for="accountnumberinput" class="col-5 col-form-label text-end">Account Number</label>
+                                                    <div class="col-7">
+                                                        <input type="text" class="form-control col-3" id="accountnumberinput">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="row">
+                                                    <label for="accountnameinput" class="col-5 col-form-label text-end">Account Name</label>
+                                                    <div class="col-7">
+                                                        <input type="text" class="form-control col-3" id="accountnameinput">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="row">
+                                                    <label for="accountnameinput" class="col-5 col-form-label text-end">Date Business Est'd</label>
+                                                    <div class="col-7">
+                                                        <input type="text" class="form-control col-3" id="accountnameinput" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="row">
+                                                    <label for="accountnameinput" class="col-5 col-form-label text-end">Date Account Opened</label>
+                                                    <div class="col-7">
+                                                        <input type="text" class="form-control col-3" id="accountnameinput" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="row">
+                                                    <label for="accountnameinput" class="col-5 col-form-label text-end">Date Account Opened</label>
+                                                    <div class="col-7">
+                                                        <input type="text" class="form-control col-3" id="accountnameinput" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="row">
+                                                    <label for="accountnameinput" class="col-5 col-form-label text-end">Business Sector</label>
+                                                    <div class="col-7">
+                                                        <input type="text" class="form-control col-3" id="accountnameinput" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="row">
+                                                    <label for="accountnameinput" class="col-5 col-form-label text-end">Type of Business</label>
+                                                    <div class="col-7">
+                                                        <input type="text" class="form-control col-3" id="accountnameinput" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="row">
+                                                    <label for="accountnameinput" class="col-5 col-form-label text-end">Main Business Location</label>
+                                                    <div class="col-7">
+                                                        <input type="text" class="form-control col-3" id="accountnameinput" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="row">
+                                                    <label for="accountnameinput" class="col-5 col-form-label text-end">Contact Person Tel No.</label>
+                                                    <div class="col-7">
+                                                        <input type="text" class="form-control col-3" id="accountnameinput" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="col-12 p-2 mb-3">
+                                                <div class="row">
+                                                    <label for="facilitytype" class="col-5 col-form-label text-end">Facility Type</label>
+                                                    <div class="col-7">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2 mb-3">
+                                                <div class="row">
+                                                    <label for="accountinput" class="col-5 col-form-label text-end">PSR Score</label>
+                                                    <div class="d-flex col-7">
+                                                        <input type="text" class="form-control flex-grow-1" id="accountnameinput">
+                                                        <a class="nav-link text-dark btn btn-warning pb-1 ms-1" href="#"><span class="fa fa-etsy"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2 mb-3">
+                                                <div class="row">
+                                                    <label for="accountinput" class="col-5 col-form-label text-end">Type of Business</label>
+                                                    <div class="col-7">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 p-2 m-0">
+                                                <div class="float-end col-7">
+                                                    <table class="table text-end table-sm table-borderless fs-8">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col"></th>
+                                                                <td scope="col">Shareholder(s)</td>
+                                                                <td scope="col">Shareholding</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row"><span class="fa fa-user"></span></th>
+                                                                <td>Love Adu-Bredu</td>
+                                                                <td>100%</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="float-end col-2">
+                                            <a class="nav-link text-dark btn btn-warning me-3" href="#">Continue<span class="fa fa-angle-right ms-5"></span></a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="facility-summary-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                    <div class="container text-center p-5">
+                                        <h4>Under construction</h4>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+                                <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
